@@ -1,0 +1,27 @@
+.nosotros-main {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    font-family: 'Dancing Script', cursive;
+}
+
+
+.nosotros-section {
+    margin: 0 10px;
+    padding: 15px;
+   
+}
+
+.nosotros-section h2 {
+    text-align: center;
+    padding: 15px 0;
+    font-size: 2rem;
+}
+
+.nosotros-section p {
+    padding: 20px;
+    font-size: 1.1rem;
+}
+
+.sectionUno, .sectionDos {
+     border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
