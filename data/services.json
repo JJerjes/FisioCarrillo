@@ -1,0 +1,98 @@
+[
+    {
+        "h3": "Sports Therapy",
+        "img": "images/services/terapia-deportiva.webp",
+        "text": "It is a branch of Physical Therapy that allows athletes to return to their physical condition and improve their confidence through the strengthening and recovery of muscles, ligaments, joints, etc. without the need for surgery or medication."
+    },
+    {
+        "h3": "Respiratory Therapy",
+        "img": "images/services/terapia-respiratoria.webp",
+        "text": "It is an individualized program to improve physical capacity, muscle strength, exercise tolerance and reduce the feeling of shortness of breath, exercises and treatments that help improve or recover lung function."
+    },
+    {
+        "h3": "Relaxing Massages",
+        "img": "images/services/masajes.webp",
+        "text": "It is a massage focused on body areas where muscle tension generally accumulates, such as the back and neck, in addition to seeking the patient's state of relaxation and health."
+    },
+    {
+        "h3": "Neurological Rehabilitation:",
+        "img": "images/services/rehabilitacion-neurologica.webp",
+        "text": "It is responsible for caring for those areas of the body that have been affected by neurological problems and among which different types of dysfunctions in the central nervous system can be found."
+    },
+    {
+        "h3": "Home Therapy",
+        "img": "images/services/terapia-domicilio.webp",
+        "text": "Home physical therapy is a specialized branch of physical therapy that is provided in the patient's home rather than a clinic or hospital. This approach is designed for those who have difficulty getting around or for whom home therapy is more convenient and effective."
+    },
+    {
+        "h3": "Geriatric Therapy",
+        "img": "images/services/terapia-geriatrica.webp",
+        "text": "In Peru it is a second specialty of physiotherapy that works on the prevention, diagnosis and treatment of pathologies in elderly people. It is based on specific forms of application and adaptation of older people and is a fundamental discipline when treating diseases derived from aging."
+    },
+    {
+        "h3": "Pediatric Physical Therapy and Rehabilitation",
+        "img": "images/services/terapia-fisica-rehabilitacion.webp",
+        "text": "Pediatric physiotherapy is the discipline of physiotherapy that is responsible for the advice, treatment and care of those babies, children and adolescents who have a general delay in their development, movement disorders (both congenital and acquired) or who are at risk. . to suffer them."
+    },
+    {
+        "h3": "Low back pain",
+        "img": "images/services/lumbalgia.webp",
+        "text": "It is the presence of pain in the lumbar region, that is, in the back and waist, which frequently extends to the buttocks and thighs; It generally occurs after exerting great effort with poor posture"
+    },
+    {
+        "h3": "Tendonitis",
+        "img": "images/services/tendinitis.webp",
+        "text": "It is an inflammation of the tendon in some region of the body, a structure formed by connective tissue responsible for joining the muscle to the bone in order to perform an adequate contraction force."
+    },
+    {
+        "h3": "Sprain",
+        "img": "images/services/esguince.webp",
+        "text": "It is a stretching or tear of ligaments, the tough bands of fibrous tissue that connect two bones at joints. The most common location of a sprain is the ankle, there are several types of sprains."
+    },
+    {
+        "h3": "Herniated Discs",
+        "img": "images/services/hernia-dical.webp",
+        "text": "The disc can slip out of place (herniate) or rupture due to an injury or strain. When this happens, there may be pressure on one or more spinal nerves. This can lead to pain, numbness, or weakness."
+    },
+    {
+        "h3": "Painful Shoulder",
+        "img": "images/services/hombro-doloroso.webp",
+        "text": "The causes that can trigger a pathology or injury in the shoulder are the degeneration of the tendons due to wear, repetitive physical efforts at work or sports, and violent trauma."
+    },
+    {
+        "h3": "Lumbo Sciatica",
+        "img": "images/services/lumbo-ciatica.webp",
+        "text": "Pain in the lower back that radiates to the lower extremity of one or both legs, sometimes even reaching the foot. The discomfort is constant, it occurs during the day and night. It can also be accompanied by a sensory or strength deficit. Evaluation in Physiotherapy is suggested."
+    },
+    {
+        "h3": "Flatfoot",
+        "img": "images/services/pie-plano.webp",
+        "text": "It is a common condition, in which the arches on the inside of the foot flatten when pressure is placed on them. When people with flat feet stand up, the foot faces outward and the entire sole of the foot falls and touches the floor. There are degrees of flat feet."
+    },
+    {
+        "h3": "Scoliosis",
+        "img": "images/services/escoliosis.webp",
+        "text": "It is a lateral curvature of the spine. Children and adolescents with scoliosis have an abnormal S- or C-shaped curvature of the spine. X-rays help determine the type of scoliosis; physical therapy evaluation is important."
+    },
+    {
+        "h3": "Carpal Tunnel Syndrome",
+        "img": "images/services/sindrome-tunel-carpiano.webp",
+        "text": "Condition in which there is excessive pressure on the median nerve in the wrist. This is the nerve that allows sensitivity and movement to parts of the hand, when altered it generates weakness, pain and even loss of strength, evaluation in physiotherapy is important."
+    },
+    {
+        "h3": "Facial Paralysis",
+        "img": "images/services/parilicis-facial.webp",
+        "text": "It consists of the total or partial loss of voluntary muscle movement on one side of the face. It is caused by a failure in the facial nerve, which does not carry nervous orders to the main muscles of the face."
+    },
+    {
+        "h3": "Parkinson's",
+        "img": "images/services/parkinson.webp",
+        "text": "It is a brain disorder that causes involuntary or uncontrollable movements, such as tremors, rigidity, and difficulty with balance and coordination. Typically, symptoms start slowly and worsen over time; there are several phases."
+    },
+    {
+        "h3": "Arthritis",
+        "img": "images/services/artritis.webp",
+        "text": "It is a disease that involves inflammation of one or more joints, causing pain, swelling, stiffness and loss of movement. This condition can affect any joint in the body, but is most common in the hands, knees, hips, and spine."
+    }
+    
+]
