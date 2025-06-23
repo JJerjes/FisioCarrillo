@@ -1,28 +1,28 @@
-function displayServices(service) {
+function displayServices(services) {
     const container = document.querySelector('#services-container');
-    service.forEach( (service) => {
-        const element = document.createElement('div');
-        element.classList.add('service');
-        element.innerHTML = `
+    services.forEach( (service) => {
+        const elemet = document.createElement('div');
+        elemet.classList.add('cards');
+        elemet.innerHTML= `
             <h3>${service.h3}</h3>
-            <img src="${service.img}" alt="${service.h3}">
+            <img src="${service.img}" alt="${service.h3}" width="250">
             <p>${service.text}</p>
         `;
-        container.appendChild(element)
+        container.appendChild(elemet)
     });
 }
 
 document.addEventListener('DOMContentLoaded', loadServices);
 
 async function loadServices() {
-    try {
-        const response = await fetch('data/services.json');
+    try{
+        const response = await fetch('/data/services.json');
         if (!response.ok) {
             throw new Error('Error al cargar')
         }
 
-        const service = await response.json();
-        displayServices(service);
+        const services = await response.json();
+        displayServices(services);
     } catch (error) {
         console.error('Error al cargar')
     }

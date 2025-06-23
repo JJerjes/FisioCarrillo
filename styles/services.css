@@ -97,37 +97,59 @@ nav a:hover {
 } 
 
 /*MAIN*/
-main { 
-    padding: 40px;
-}
 
-.nosotros-main {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    font-family: 'Dancing Script', cursive;
-}
 
-.nosotros-section {
-    margin: 0 10px;
-    padding: 15px;
-   
-}
-
-.nosotros-section h2 {
-    text-align: center;
-    padding: 15px 0;
-    font-size: 2rem;
-}
-
-.nosotros-section p {
+#services {
     padding: 20px;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.3rem;
+    display: grid;
+    grid-template-rows: auto 1fr;
 }
 
+#services h2 {
+    margin: 0 0 10px 0;
+    text-align: center;
+    background-color: rgba(227, 223, 223, 0.2);
+    padding: 10px;
+    color: navy;
+    font-size: 2rem;
+    font-family: 'Dancing Script', cursive;
+}
+
+#services-container {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cards {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 430px;
+    margin: 0 10px 10px 0;
+}
+
+.cards h3 {
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(21, 21, 148);
+    color: white;
+    font-size: 1rem;
+}
+
+.cards img {
+    width: 100%;
+    height: 200px;
+}
+
+.cards p {
+    padding: 20px;
+    font-size: 0.9rem;
+    font-family: 'Montserrat', sans-serif;
+}
 
 /*FOOTER*/
 footer {
