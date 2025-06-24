@@ -1,0 +1,261 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*HEADER*/
+
+header {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.social{
+    display: flex;
+    justify-content: end;
+    padding: 2px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.social a {
+    padding: 0 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2px;
+    transition: transform 1s ease;
+}
+
+.social a:hover {
+    transform: scale(1.2);
+}
+
+.logo-nav {
+    display: flex;
+    justify-content: space-around;
+     background-color: rgba(0, 0, 0, 0.03);
+}
+
+.logo {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.nav {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+nav a {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    width: 140px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 400;
+    color: black;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    transition: color 0.3s ease;
+}
+
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.05);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.5s ease;
+    z-index: -1;
+    border-radius: 4px;
+}
+
+nav a:hover::after {
+    transform: scaleY(1);
+}
+
+nav a:hover {
+    font-weight: 300;
+    color: navy;  
+} 
+
+/*MAIN*/
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 50px;
+}
+
+/*Formulario*/
+.formulario {
+    width: 100%;
+    display: grid;
+    justify-content: start;
+}
+
+.formulario h2 {
+    text-align: center;
+    color: navy;
+    margin: 30px 0 10px 0;
+}
+
+.form fieldset {
+    margin: 2rem 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: .5rem 2%;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    width: 450px;
+}
+
+.form legend {
+    color: #0c0c0c;
+    padding: 0 .5rem;
+    font-weight: 500;
+}
+
+.form label {
+    display: block;
+    padding-top: 1rem;
+    color: rgb(32, 31, 31);
+    font-size: .9rem;
+}
+
+.form input[type="text"],
+.form input[type="number"],
+.form input[type="tel"],
+.form input[type="email"],
+.form input[type="date"],
+.form select {
+    background-color: #eee;
+    display: block;
+    border: 1px solid #999;
+    border-radius: 6px;
+    padding: .75rem;
+    color: #555;
+    width: 100%;
+    max-width: 400px;
+}
+
+.form input[type="checkbox"] {
+    margin-right: 10px;
+} 
+
+.form button[type="submit"] {
+    border: none;
+    background-image: linear-gradient(#9c2c13, #6f200e);
+    color: #fff;
+    border-radius: 6px;
+    padding: .8rem;
+    width: 96%;
+    max-width: 400px;
+    margin: -1rem 2% 2rem 2%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.form button[type="submit"]:hover {
+    background-image: linear-gradient(#001f6b, #001242);
+}
+
+.form button:required {
+    border-right: 5px solid red;
+}
+
+.form button:required:valid {
+    border-right: 8px solid green;
+}
+
+
+/*FOOTER*/
+footer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    padding: 10px 50px;
+    border-top: 1px dotted rgba(0, 0, 0, 0.5);
+}
+
+footer h3 {
+    margin: 0 0 10px 0;
+    font-size: small;
+    color: black;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    font-size: xx-small;
+}
+
+.about a {
+    text-decoration: none;
+    padding: 3px 0;
+    color: black;
+}
+
+.about a:hover {
+    color: black;
+    font-weight: 600;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    font-size: xx-small;
+}
+
+.address a {
+    color: black;
+    text-decoration: none;
+    padding: 3px 0;
+    width: 300px;
+}
+
+.address a:hover {
+    color: black;
+    font-weight: 600;
+}
+
+.cel {
+    display: flex;
+    align-items: center;
+}
+
+.cel:hover {
+    font-weight: bold;
+}
+
+.cel img {
+    margin: 0 10px 5px 0;
+}
+
+
+.redes a {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    transition: transform 1s ease;
+}
+
+.redes a:hover {
+    transform: scale(1.3);
+}
