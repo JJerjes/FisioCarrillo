@@ -184,7 +184,6 @@ main p {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.03);
 }
 
 /*FOOTER*/
@@ -322,11 +321,9 @@ footer h3 {
     }
 
     .sectionOne {
-        
         padding: 30px;
         border-radius: 1%;  
     }
-
 
     .hero {
         width: 300px;
