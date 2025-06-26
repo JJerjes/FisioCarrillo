@@ -1,14 +1,14 @@
 function displayServices(services) {
     const container = document.querySelector('#services-container');
-    services.forEach( (service) => {
-        const elemet = document.createElement('div');
-        elemet.classList.add('cards');
-        elemet.innerHTML= `
+    services.forEach((service) => {
+        const element = document.createElement('div'); // corregido elemet → element
+        element.classList.add('cards');
+        element.innerHTML = `
             <h3>${service.h3}</h3>
             <img src="${service.img}" alt="${service.h3}" width="250" loading="lazy">
             <p>${service.text}</p>
         `;
-        container.appendChild(elemet)
+        container.appendChild(element); // falta el ; opcional pero recomendable
     });
 }
 
