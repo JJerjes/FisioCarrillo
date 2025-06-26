@@ -5,7 +5,7 @@ function displayServices(services) {
         elemet.classList.add('cards');
         elemet.innerHTML= `
             <h3>${service.h3}</h3>
-            <img src="${service.img}" alt="${service.h3}" width="250">
+            <img src="${service.img}" alt="${service.h3}" width="250" loading="lazy">
             <p>${service.text}</p>
         `;
         container.appendChild(elemet)
