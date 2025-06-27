@@ -2,7 +2,7 @@ let disponibilidad = {};
 
 async function cargarDisponibilidad() {
     try {
-        const response = await fetch('/data/disponibilidad.json');
+        const response = await fetch('data/disponibilidad.json');
         if (!response.ok) {
             throw new Error('No se pudo cargar disponibilidad.json');
         }
