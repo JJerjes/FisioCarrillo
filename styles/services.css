@@ -94,7 +94,36 @@ nav a:hover::after {
 nav a:hover {
     font-weight: 300;
     color: navy;  
-} 
+}
+
+
+/*MENU*/
+#menu {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 30px;
+    right: 10px;
+    border: none;
+    border-radius: 4px;
+    background: none;
+    display: none;
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "=";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+#menu.open::before {
+    content: "✖️";
+    font-size: 0.9rem;
+}
+
 
 /*MAIN*/
 
@@ -232,5 +261,276 @@ p {
 
 .sectionUno, .sectionDos {
      border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/*MEDIA*/
+
+@media (max-width: 855px) {
+    #menu {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 80%;
+        
+    }
+
+    .nav a {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+
+    }
+
+    .nav.open {
+        display: flex;
+    }
+    
+    .logo-nav {
+        flex-direction: column;
+        
+    }
+    .logo {
+        justify-content: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+   
+    /*REDES COCIALES*/
+    .social{
+        justify-content: start;
+        padding: 5px;
+        
+    }
+
+    .social a {
+        padding: 0 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 2px;
+        transition: transform 1s ease;
+    }
+
+    /*MAIN*/
+    
+    /*FOOTER*/
+
+    footer {
+        grid-template-columns: auto auto auto;
+        justify-content: space-between;
+        padding: 10px ;
+        
+    }
+
+    footer h3 {
+        margin: 10px 0 0 0;
+    }
+    
+    .redes-a {
+        display: flex;    
+    }
+
+    .redes-a a {
+        margin: 10px 10px 0 0;
+    }
+}
+
+
+@media (max-width: 600px) {
+    #menu {
+        display: block;
+    }
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 80%;
+        
+    }
+    .nav a {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .nav.open {
+        display: flex;
+    }
+    
+    .logo-nav {
+        flex-direction: column;
+    }
+    .logo {
+        justify-content: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    /*REDES COCIALES*/
+    .social{
+        justify-content: start;
+        padding: 5px;
+        
+    }
+
+    .social a {
+        padding: 0 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 2px;
+        transition: transform 1s ease;
+    }
+
+    /*MAIN*/
+    
+    /*FOOTER*/
+
+    footer {
+        grid-template-columns: 1fr;
+        justify-content: space-between;
+        padding: 10px ;
+    }
+
+    footer h3 {
+        margin: 10px 0 0 0;
+    }
+    
+    .redes-a {
+        display: flex;    
+    }
+
+    .redes-a a {
+        margin: 10px 10px 0 0;
+    }
+}
+
+
+
+@media (max-width: 425px) {
+    #menu {
+        display: block;
+    }
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 80%;
+        
+    }
+
+    .nav.open {
+        display: flex;
+    }
+    
+    .logo-nav {
+        flex-direction: column;
+    }
+    .logo {
+        justify-content: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    /*REDES COCIALES*/
+    .social{
+        justify-content: start;
+        padding: 5px;
+    }
+
+    .social a {
+        padding: 0 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 2px; 
+    }
+
+    /*MAIN*/
+    
+
+    /*FOOTER*/
+    footer {
+        grid-template-columns: 1fr;
+        justify-content: space-between;
+        padding: 10px ;
+    }
+    footer h3 {
+        margin: 10px 0 0 0;
+    }
+    
+    .redes-a {
+        display: flex;    
+    }
+    .redes-a a {
+        margin: 10px 10px 0 0;
+    }
+}
+
+@media (max-width: 375px) {
+    #menu {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .nav.open {
+        display: flex;
+    }
+    
+    .logo-nav {
+        flex-direction: column;
+    }
+    .logo {
+        justify-content: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+   
+
+    /*REDES COCIALES*/
+    .social{
+        justify-content: start;
+        padding: 5px;
+    }
+
+    .social a {
+        padding: 0 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 2px;
+        transition: transform 1s ease;
+    }
+
+
+    /*MAIN*/
+    
+
+    
+    /*FOOTER*/
+    footer {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        padding: 10px ;
+        
+    }
+
+    footer h3 {
+        margin: 10px 0 0 0;
+    }
+    
+    .redes-a {
+        display: flex;    
+    }
+
+    .redes-a a {
+        margin: 10px 10px 0 0;
+    }
 }
 
