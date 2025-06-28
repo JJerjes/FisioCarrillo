@@ -1,58 +1,21 @@
+// 👇 Este es el JSON de disponibilidad integrado directamente
 const disponibilidad = {
     vmt: {
-        0: [
-            { inicio: "08:00", fin: "15:00", lic: "Licenciado Miguel" },
-            { inicio: "15:00", fin: "22:00", lic: "Licenciado Alexander" }
-        ],
-        1: [
-            { inicio: "08:00", fin: "15:00", lic: "Licenciado Carlos" },
-            { inicio: "15:00", fin: "22:00", lic: "Licenciado Pedro" }
-        ],
-        2: [
-            { inicio: "08:00", fin: "15:00", lic: "Licenciado Miguel" },
-            { inicio: "15:00", fin: "22:00", lic: "Licenciado Alexander" }
-        ],
-        3: [
-            { inicio: "08:00", fin: "15:00", lic: "Licenciado Carlos" },
-            { inicio: "15:00", fin: "22:00", lic: "Licenciado Pedro" }
-        ],
-        4: [
-            { inicio: "08:00", fin: "15:00", lic: "Licenciado Miguel" },
-            { inicio: "15:00", fin: "22:00", lic: "Licenciado Alexander" }
-        ],
-        5: [
-            { inicio: "08:00", fin: "15:00", lic: "Licenciado Carlos" },
-            { inicio: "15:00", fin: "22:00", lic: "Licenciado Alexander" }
-        ],
-        6: [
-            { inicio: "09:00", fin: "14:00", lic: "Licenciado Pedro" }
-        ]
+        0: [ { inicio: "08:00", fin: "15:00", lic: "Licenciado Miguel" }, { inicio: "15:00", fin: "22:00", lic: "Licenciado Alexander" } ],
+        1: [ { inicio: "08:00", fin: "15:00", lic: "Licenciado Carlos" }, { inicio: "15:00", fin: "22:00", lic: "Licenciado Pedro" } ],
+        2: [ { inicio: "08:00", fin: "15:00", lic: "Licenciado Miguel" }, { inicio: "15:00", fin: "22:00", lic: "Licenciado Alexander" } ],
+        3: [ { inicio: "08:00", fin: "15:00", lic: "Licenciado Carlos" }, { inicio: "15:00", fin: "22:00", lic: "Licenciado Pedro" } ],
+        4: [ { inicio: "08:00", fin: "15:00", lic: "Licenciado Miguel" }, { inicio: "15:00", fin: "22:00", lic: "Licenciado Alexander" } ],
+        5: [ { inicio: "08:00", fin: "15:00", lic: "Licenciado Carlos" }, { inicio: "15:00", fin: "22:00", lic: "Licenciado Alexander" } ],
+        6: [ { inicio: "09:00", fin: "14:00", lic: "Licenciado Pedro" } ]
     },
     sjm: {
-        0: [
-            { inicio: "08:00", fin: "15:00", lic: "Licenciado Carlos" },
-            { inicio: "15:00", fin: "22:00", lic: "Licenciado Pedro" }
-        ],
-        1: [
-            { inicio: "08:00", fin: "15:00", lic: "Licenciado Alexander" },
-            { inicio: "15:00", fin: "22:00", lic: "Licenciado Miguel" }
-        ],
-        2: [
-            { inicio: "08:00", fin: "15:00", lic: "Licenciado Carlos" },
-            { inicio: "15:00", fin: "22:00", lic: "Licenciado Pedro" }
-        ],
-        3: [
-            { inicio: "08:00", fin: "15:00", lic: "Licenciado Alexander" },
-            { inicio: "15:00", fin: "22:00", lic: "Licenciado Miguel" }
-        ],
-        4: [
-            { inicio: "08:00", fin: "15:00", lic: "Licenciado Carlos" },
-            { inicio: "15:00", fin: "22:00", lic: "Licenciado Pedro" }
-        ],
-        5: [
-            { inicio: "08:00", fin: "15:00", lic: "Licenciado Alexander" },
-            { inicio: "15:00", fin: "22:00", lic: "Licenciado Miguel" }
-        ],
+        0: [ { inicio: "08:00", fin: "15:00", lic: "Licenciado Carlos" }, { inicio: "15:00", fin: "22:00", lic: "Licenciado Pedro" } ],
+        1: [ { inicio: "08:00", fin: "15:00", lic: "Licenciado Alexander" }, { inicio: "15:00", fin: "22:00", lic: "Licenciado Miguel" } ],
+        2: [ { inicio: "08:00", fin: "15:00", lic: "Licenciado Carlos" }, { inicio: "15:00", fin: "22:00", lic: "Licenciado Pedro" } ],
+        3: [ { inicio: "08:00", fin: "15:00", lic: "Licenciado Alexander" }, { inicio: "15:00", fin: "22:00", lic: "Licenciado Miguel" } ],
+        4: [ { inicio: "08:00", fin: "15:00", lic: "Licenciado Carlos" }, { inicio: "15:00", fin: "22:00", lic: "Licenciado Pedro" } ],
+        5: [ { inicio: "08:00", fin: "15:00", lic: "Licenciado Alexander" }, { inicio: "15:00", fin: "22:00", lic: "Licenciado Miguel" } ],
         6: []
     }
 };
@@ -108,61 +71,77 @@ function actualizarHorarios() {
 }
 
 function asignarLicenciado() {
-    const selectedOption = hour.selectedOptions[0];
+    const selectedIndex = hour.selectedIndex;
+    if (selectedIndex === -1) {
+        section.value = 'No disponible';
+        return;
+    }
+    const selectedOption = hour.options[selectedIndex];
     section.value = selectedOption?.dataset?.licenciado || 'No disponible';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Eventos
     branch.addEventListener('change', actualizarHorarios);
     date.addEventListener('change', actualizarHorarios);
     hour.addEventListener('change', asignarLicenciado);
 
     document.querySelector('form').addEventListener('submit', function (e) {
-        e.preventDefault();
+    e.preventDefault();
 
-        const name = document.querySelector('#name').value;
-        const phone = document.querySelector('#phone').value;
-        const fecha = document.querySelector('#date').value;
-        const hora = document.querySelector('#hour').value;
-        const sede = branch.options[branch.selectedIndex].textContent;
-        const licenciado = section.value;
+    const name = document.querySelector('#name').value.trim();
+    const phone = document.querySelector('#phone').value.trim();
+    const fecha = document.querySelector('#date').value;
+    const hora = document.querySelector('#hour').value;
+    const sede = branch.options[branch.selectedIndex].textContent;
+    const licenciado = section.value;
 
-        if (!name || !phone || !hora || !fecha || !licenciado) {
-            alert("Por favor, completa todos los campos antes de enviar.");
-            return;
-        }
+    if (!hora || !fecha || !licenciado || !name || !phone) {
+        alert("Por favor, completa todos los campos antes de enviar.");
+        return;
+    }
 
-        const mensaje = `Hola Jerjes Mariluz,%0A%0ATu cita ha sido registrada con éxito:%0A📍 Sede: ${sede}%0A📅 Fecha: ${fecha}%0A🕰️ Hora: ${hora}%0A👨‍⚕️ Licenciado: ${licenciado}%0A%0AGracias por confiar en FisioCarrillo.`;
-        const telefonoFisio = "51958982907";
-        const urlWhatsApp = `https://wa.me/${telefonoFisio}?text=${mensaje}`;
+    // Mensaje codificado correctamente
+    const mensajeTexto = `Hola ${name},
 
-        window.open(urlWhatsApp, '_blank');
+Tu cita ha sido registrada con éxito:
+📍 Sede: ${sede}
+📅 Fecha: ${fecha}
+⏰ Hora: ${hora}
+👨‍⚕️ Licenciado: ${licenciado}
 
-        Swal.fire({
-            icon: 'success',
-            title: '¡Cita registrada con éxito!',
-            html: `
-                <p><strong>Hola ${name},</strong></p>
-                <p>Tu cita fue enviada vía WhatsApp:</p>
-                <p>📍 <strong>Sede:</strong> ${sede}</p>
-                <p>📅 <strong>Fecha:</strong> ${fecha}</p>
-                <p>⏰ <strong>Hora:</strong> ${hora}</p>
-                <p>👨‍⚕️ <strong>Licenciado:</strong> ${licenciado}</p>
-                <hr>
-                <p>✅ Se ha enviado al equipo de FisioCarrillo.</p>
-                <p>Si tienes urgencias, comunícate directamente con nosotros.</p>
-            `,
-            confirmButtonText: 'Entendido'
-        });
+Gracias por confiar en FisioCarrillo.`;
 
-        e.target.reset();
-        hour.innerHTML = '';
-        section.value = '';
+    const mensaje = encodeURIComponent(mensajeTexto); // codificar todo el bloque
+    const telefonoFisio = "51958982907";
+    const urlWhatsApp = `https://wa.me/${telefonoFisio}?text=${mensaje}`;
+
+    window.open(urlWhatsApp, '_blank');
+
+    Swal.fire({
+        icon: 'success',
+        title: '¡Cita registrada con éxito!',
+        html: `
+            <p><strong>Hola ${name},</strong></p>
+            <p>Tu cita fue enviada vía WhatsApp:</p>
+            <p>📍 <strong>Sede:</strong> ${sede}</p>
+            <p>📅 <strong>Fecha:</strong> ${fecha}</p>
+            <p>⏰ <strong>Hora:</strong> ${hora}</p>
+            <p>👨‍⚕️ <strong>Licenciado:</strong> ${licenciado}</p>
+            <hr>
+            <p>✅ Se ha enviado al equipo de FisioCarrillo.</p>
+            <p>Si tienes urgencias, comunícate directamente con nosotros.</p>
+        `,
+        confirmButtonText: 'Entendido'
     });
+
+    e.target.reset();
+    hour.innerHTML = '';
+    section.value = '';
 });
 
 
-
+});
 
 
 
