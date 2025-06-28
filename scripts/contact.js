@@ -1,16 +1,61 @@
-let disponibilidad = {};
-
-async function cargarDisponibilidad() {
-    try {
-        const response = await fetch('../data/disponibilidad.json');
-        if (!response.ok) {
-            throw new Error('No se pudo cargar disponibilidad.json');
-        }
-        disponibilidad = await response.json();
-    } catch (error) {
-        console.error('Error al cargar disponibilidad', error);
+const disponibilidad = {
+    vmt: {
+        0: [
+            { inicio: "08:00", fin: "15:00", lic: "Licenciado Miguel" },
+            { inicio: "15:00", fin: "22:00", lic: "Licenciado Alexander" }
+        ],
+        1: [
+            { inicio: "08:00", fin: "15:00", lic: "Licenciado Carlos" },
+            { inicio: "15:00", fin: "22:00", lic: "Licenciado Pedro" }
+        ],
+        2: [
+            { inicio: "08:00", fin: "15:00", lic: "Licenciado Miguel" },
+            { inicio: "15:00", fin: "22:00", lic: "Licenciado Alexander" }
+        ],
+        3: [
+            { inicio: "08:00", fin: "15:00", lic: "Licenciado Carlos" },
+            { inicio: "15:00", fin: "22:00", lic: "Licenciado Pedro" }
+        ],
+        4: [
+            { inicio: "08:00", fin: "15:00", lic: "Licenciado Miguel" },
+            { inicio: "15:00", fin: "22:00", lic: "Licenciado Alexander" }
+        ],
+        5: [
+            { inicio: "08:00", fin: "15:00", lic: "Licenciado Carlos" },
+            { inicio: "15:00", fin: "22:00", lic: "Licenciado Alexander" }
+        ],
+        6: [
+            { inicio: "09:00", fin: "14:00", lic: "Licenciado Pedro" }
+        ]
+    },
+    sjm: {
+        0: [
+            { inicio: "08:00", fin: "15:00", lic: "Licenciado Carlos" },
+            { inicio: "15:00", fin: "22:00", lic: "Licenciado Pedro" }
+        ],
+        1: [
+            { inicio: "08:00", fin: "15:00", lic: "Licenciado Alexander" },
+            { inicio: "15:00", fin: "22:00", lic: "Licenciado Miguel" }
+        ],
+        2: [
+            { inicio: "08:00", fin: "15:00", lic: "Licenciado Carlos" },
+            { inicio: "15:00", fin: "22:00", lic: "Licenciado Pedro" }
+        ],
+        3: [
+            { inicio: "08:00", fin: "15:00", lic: "Licenciado Alexander" },
+            { inicio: "15:00", fin: "22:00", lic: "Licenciado Miguel" }
+        ],
+        4: [
+            { inicio: "08:00", fin: "15:00", lic: "Licenciado Carlos" },
+            { inicio: "15:00", fin: "22:00", lic: "Licenciado Pedro" }
+        ],
+        5: [
+            { inicio: "08:00", fin: "15:00", lic: "Licenciado Alexander" },
+            { inicio: "15:00", fin: "22:00", lic: "Licenciado Miguel" }
+        ],
+        6: []
     }
-}
+};
 
 const branch = document.querySelector('#branch');
 const date = document.querySelector('#date');
@@ -63,17 +108,11 @@ function actualizarHorarios() {
 }
 
 function asignarLicenciado() {
-    const selectedIndex = hour.selectedIndex;
-    if (selectedIndex === -1) {
-        section.value = 'No disponible';
-        return;
-    }
-    const selectedOption = hour.options[selectedIndex];
+    const selectedOption = hour.selectedOptions[0];
     section.value = selectedOption?.dataset?.licenciado || 'No disponible';
 }
 
-document.addEventListener('DOMContentLoaded', async () => {
-    await cargarDisponibilidad();
+document.addEventListener('DOMContentLoaded', () => {
     branch.addEventListener('change', actualizarHorarios);
     date.addEventListener('change', actualizarHorarios);
     hour.addEventListener('change', asignarLicenciado);
@@ -88,20 +127,17 @@ document.addEventListener('DOMContentLoaded', async () => {
         const sede = branch.options[branch.selectedIndex].textContent;
         const licenciado = section.value;
 
-        if (!hora || !fecha || !licenciado) {
+        if (!name || !phone || !hora || !fecha || !licenciado) {
             alert("Por favor, completa todos los campos antes de enviar.");
             return;
         }
 
-        const mensaje = `Hola Jerjes Mariluz,%0A%0ATu cita ha sido registrada con éxito:%0A%F0%9F%93%8D Sede: ${sede}%0A%F0%9F%93%85 Fecha: ${fecha}%0A%F0%9F%95%B0 Hora: ${hora}%0A%F0%9F%91%A8%E2%80%8D%F0%9F%8F%AB Licenciado: ${licenciado}%0A%0AGracias por confiar en FisioCarrillo.`;
-
-        // WhatsApp Web redirige al número del fisioterapeuta
-        const telefonoFisio = "51958982907"; // sin el + al inicio
+        const mensaje = `Hola Jerjes Mariluz,%0A%0ATu cita ha sido registrada con éxito:%0A📍 Sede: ${sede}%0A📅 Fecha: ${fecha}%0A🕰️ Hora: ${hora}%0A👨‍⚕️ Licenciado: ${licenciado}%0A%0AGracias por confiar en FisioCarrillo.`;
+        const telefonoFisio = "51958982907";
         const urlWhatsApp = `https://wa.me/${telefonoFisio}?text=${mensaje}`;
 
         window.open(urlWhatsApp, '_blank');
 
-        // Mostrar confirmación al cliente
         Swal.fire({
             icon: 'success',
             title: '¡Cita registrada con éxito!',
@@ -119,17 +155,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             confirmButtonText: 'Entendido'
         });
 
-        // Resetear formulario
         e.target.reset();
         hour.innerHTML = '';
         section.value = '';
     });
 });
-
-
-
-
-
 
 
 
