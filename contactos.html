@@ -5,46 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="FisioCarrillo ofrece terapias físicas personalizadas para mejorar tu salud, movilidad y calidad de vida. ¡Recupérate con nosotros!">
     <meta name="author" content="Jerjes Mariluz C.">
+    
     <title>FisioCarrillo</title>
+    
     <meta property="og:title" content="FisioCarrillo">
     <meta property="og:description" content="FisioCarrillo ofrece terapias físicas personalizadas para mejorar tu salud, movilidad y calidad de vida. ¡Recupérate con nosotros!">
     <meta property="og:image" content="https://i.imgur.com/E0bXW5y.jpeg">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://github.com/JJerjes/wdd231-WebFrontendDevelopment-I.git">
+    
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@fisiocarrillo">
     <meta name="twitter:title" content="FisioCarrillo">
     <meta name="twitter:description" content="FisioCarrillo ofrece terapias físicas personalizadas para mejorar tu salud, movilidad y calidad de vida. ¡Recupérate con nosotros!">
     <meta name="twitter:image" content="https://i.imgur.com/E0bXW5y.jpeg">
     <meta name="twitter:url" content="https://github.com/JJerjes/wdd231-WebFrontendDevelopment-I.git">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles/contact.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/main.min.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="styles/contact.css">
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="scripts/index.js" defer></script>
-    <script src="scripts/contact.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <script type="module" src="scripts/main.js"></script>
+
 </head>
 <body>
     <header>
-        <article class="social">
+         <article class="social">
             <a href="" title="GMAIL"><img src="images/g.webp" alt="correo electronico" width="20"></a>
             <a href="https://www.facebook.com/fisioterapia.carrillo.7?mibextid=ZbWKwL" target="_blank" title="FACEBOOK"><img src="images/facebook.webp" alt="facebook" width="20"></a>
             <a href="https://www.instagram.com/carrillofisioterapia/profilecard/?igsh=N3dkcnlndm9qeTcx" target="_blank" title="INSTAGRAM"><img src="images/instagram.webp" alt="instagram" width="20"></a>
-            <a href="https://wa.me/+51933752664" target="_blank"><img src="images/whatsapp.webp" alt="whatsapp" width="20" title="WHATSAPP"></a>
+            <a href="https://wa.me/+51933752664?text=Hola%2C%20bienvenido%20a%20FisioCarrillo%20%F0%9F%91%8B%0A%C2%BFEn%20qu%C3%A9%20podemos%20ayudarte%20hoy%3F" target="_blank" title="Whatsapp"><img src="images/whatsapp.webp" alt="whatsapp" width="20"></a>            
         </article>
 
         <section class="logo-nav">
             <section class="logo">
-                <img src="images/logo.webp" alt="" width="100">
+                <img src="images/logo.webp" alt="Logo FisioCarrillo" width="100">
             </section>
             <nav class="nav" id="nav">
                 <a href="index.html" title="INICIO">Inicio</a>
@@ -61,14 +68,14 @@
         <section class="container">        
             <section class="formulario">
                 <h2>Formulario</h2>
-                <form action="" method="post" class="form">
+                <form action="" method="post" class="form" id="contact-form">
                     <fieldset>
                         <legend>Informacion Personal</legend>
                         <label for="name">Nombre Completo:</label>
                         <input type="text" id="name" name="name" required>
 
                         <label for="dni">DNI:</label>
-                        <input type="text" id="dni" name="dni" maxlength="8" pattern="\d{8}" required>
+                        <input type="text" id="dni" name="dni" maxlength="8" pattern="\d{8}" required title="Debe contener exactamente 8 dígitos">
 
                         <label for="phone">Teléfono:</label>
                         <input type="tel" id="phone" name="phone" required>
@@ -86,7 +93,7 @@
                         </select>                     
 
                         <label for="date">Fecha Deseada:</label>
-                        <input type="date" id="date" name="date">
+                        <input type="date" id="date" name="date" required>
 
                         <label for="hour">Horario disponible:</label>
                         <select name="hour" id="hour" required>
@@ -116,15 +123,16 @@
             <H3>Direcciones</H3>
             <a href="https://maps.app.goo.gl/K69qnH7kau12TmSj8" target="_blank">Av. Jose Carlos Mariategui 2350 - san Garbiel - VMT</a>
             <a href="https://maps.app.goo.gl/tRztrrRoGzoHw5CJ8" target="_blank">Av. de los Heroes 962 - Urb. San Juan - SJM</a>
-            <a href="" class="cel"><img src="images/call.webp" alt="call" width="15"><strong>VMT</strong> +51 933-752-664</a>
-            <a href="" class="cel"><img src="images/call.webp" alt="call" width="15"><strong>SJM</strong> +51 903-094-526</a>
+            <a href="https://wa.me/51933752664?text=Hola%20👋%20bienvenido%20a%20FisioCarrillo%20VMT.%20¿En%20qué%20podemos%20ayudarte%3F" class="cel" target="_blank"><img src="images/call.webp" alt="call" width="15"><strong>VMT</strong> +51 933-752-664</a>
+            <a href="https://wa.me/51903094526?text=Hola%20👋%20bienvenido%20a%20FisioCarrillo%20SJM.%20¿En%20qué%20podemos%20ayudarte%3F" class="cel" target="_blank"><img src="images/call.webp" alt="call" width="15"><strong>SJM</strong> +51 903-094-526</a>
         </section>
         <section class="redes">
             <h3>Redes Social</h3>
             <section class="redes-a">
-                <a href="" title="FACEBOOK"><img src="images/facebook.webp" alt="Facebook" width="15"></a>
-                <a href="" title="INSTAGRAM"><img src="images/instagram.webp" alt="Instagram" width="15"></a>
-                <a href="" title="WHATSAPP"><img src="images/whatsapp.webp" alt="WhatsApp" width="15"></a>
+                <a href="" title="GMAIL"><img src="images/g.webp" alt="correo electronico" width="15"></a>
+                <a href="https://m.facebook.com/100063558939180/" title="FACEBOOK"><img src="images/facebook.webp" alt="Facebook" width="15"></a>                
+                <a href="https://www.instagram.com/carrillofisioterapia/profilecard/?igsh=N3dkcnlndm9qeTcx" target="_blank" title="INSTAGRAM"><img src="images/instagram.webp" alt="instagram" width="15"></a>            
+                <a href="https://wa.me/+51933752664?text=Hola%2C%20bienvenido%20a%20FisioCarrillo%20%F0%9F%91%8B%0A%C2%BFEn%20qu%C3%A9%20podemos%20ayudarte%20hoy%3F" target="_blank" title="Whatsapp"><img src="images/whatsapp.webp" alt="whatsapp" width="15"></a>                
             </section>
         </section>
     </footer>

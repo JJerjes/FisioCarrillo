@@ -19,7 +19,6 @@ body {
 header {
     display: grid;
     grid-template-rows: auto 1fr;
-    width: 100%;    
 }
 
 .social{
@@ -45,20 +44,18 @@ header {
 .logo-nav {
     display: flex;
     justify-content: space-around;
-    background-color: rgba(0, 0, 0, 0.03);
+     background-color: rgba(0, 0, 0, 0.03);
 }
 
 .logo {
-    width: 100%;
+    width: 300px;
     display: flex;
     justify-content: center;
     padding: 5px;
 }
 
-
-
 .nav {
-    width: 100%;
+    width: 50%;
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -68,8 +65,7 @@ nav a {
     position: relative;
     display: inline-block;
     padding: 10px;
-    min-width: 100px;
-    max-width: 100%;
+    width: 140px;
     text-align: center;
     text-decoration: none;
     font-weight: 400;
@@ -101,14 +97,13 @@ nav a:hover::after {
 nav a:hover {
     font-weight: 300;
     color: navy;  
-} 
-
+}
 /*MENU*/
 #menu {
     position: absolute;
     width: 25px;
     height: 25px;
-    top: 30px;
+    top: 40px;
     right: 10px;
     border: none;
     border-radius: 4px;
@@ -118,7 +113,7 @@ nav a:hover {
 }
 
 #menu::before {
-    content: "=";
+    content: "≣";
     display: flex;
     justify-content: center;
     align-items: center;
@@ -126,8 +121,8 @@ nav a:hover {
 }
 
 #menu.open::before {
-    content: "✖️";
-    font-size: 0.9rem;
+    content: "❌";
+    font-size: 1rem;
 }
 
 /*MAIN*/

@@ -112,7 +112,7 @@ nav a:hover {
 }
 
 #menu::before {
-    content: "=";
+    content: "≣";
     display: flex;
     justify-content: center;
     align-items: center;
@@ -120,10 +120,9 @@ nav a:hover {
 }
 
 #menu.open::before {
-    content: "✖️";
-    font-size: 0.9rem;
+    content: "❌";
+    font-size: 1rem;
 }
-
 
 /*MAIN*/
 
